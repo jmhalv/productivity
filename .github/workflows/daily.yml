@@ -1,0 +1,45 @@
+name: productivity
+
+on:
+  schedule:
+    - cron: "00 13 * * *" 
+  workflow_dispatch:         
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Do something pointless
+        run: |
+          MESSAGES=(
+            "placed left shoe on right foot"
+            "stared at wall for 12 minutes"
+            "rearranged the deck chairs"
+            "sneezed in a semicolon-friendly manner"
+            "ultimate refactoring: phase 3"
+            "renamed a variable in my head"
+            "fixed a bug that did not exist"
+            "argued with a houseplant"
+            "deployed something useful to production"
+            "reticulated splines"
+            "added a comment and deleted it"
+            "blinked twice for good luck"
+            "moved a bookmark from one folder to another"
+            "held a very important meeting"
+            "optimized everything, at scale"
+            "turned it off and on again"
+          )
+          MSG="${MESSAGES[RANDOM % ${#MESSAGES[@]}]}"
+
+          echo "$(date -u +%F): $MSG" >> LOG.md
+
+          git config user.name "jmhalv"
+          git config user.email "257144812+jmhalv@users.noreply.github.com"
+          git add LOG.md
+          git commit -m "$MSG"
+          git push
