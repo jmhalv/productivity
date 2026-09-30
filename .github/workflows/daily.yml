@@ -21,7 +21,7 @@ jobs:
             "stared at wall for 12 minutes"
             "rearranged the deck chairs"
             "sneezed in a semicolon-friendly manner"
-            "ultimate refactoring: phase 3"
+            "refactoring: phase 3"
             "renamed a variable in my head"
             "fixed a bug that did not exist"
             "argued with a houseplant"
@@ -33,6 +33,7 @@ jobs:
             "held a very important meeting"
             "optimized everything, at scale"
             "turned it off and on again"
+            "was not inspired by signorovitch"
           )
           MSG="${MESSAGES[RANDOM % ${#MESSAGES[@]}]}"
 
