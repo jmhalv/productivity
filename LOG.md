@@ -15,3 +15,4 @@
 2026-10-12: Deployed nothing in particular to production
 2026-10-13: Fixed a bug that did not exist
 2026-10-14: Moved a bookmark from one folder to another
+2026-10-15: Optimized everything, at scale
