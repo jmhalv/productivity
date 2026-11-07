@@ -38,3 +38,4 @@
 2026-11-04: Refactoring: phase 3
 2026-11-05: Refactoring: phase 3
 2026-11-06: Added a comment and deleted it
+2026-11-07: Reticulated splines
